@@ -2,12 +2,10 @@
   "name": "todolist-api-example",
   "version": "1.0.0",
   "description": "Backend for the Todo List example app",
-  "repository": "github:kintohub/todolist-api-example",
-  "license": "MIT",
   "private": true,
   "main": "app/index.js",
   "scripts": {
-    "start": "babel-node app/index.js --inspect",
+    "start": "babel-node  app/index.js --inspect",
     "build": "babel -d ./dist ./app",
     "build:clean": "rm -rf dist",
     "serve": "node dist/index.js",

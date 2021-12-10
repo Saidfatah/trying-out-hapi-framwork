@@ -3,9 +3,9 @@ import mongoose from 'mongoose'
 export default async () => {
   try {
     const connectionStr = process.env.MONGODB_CONNECTION_STRING
-
+   
     console.log('MONGODB:', connectionStr)
-    await mongoose.connect(connectionStr, { useNewUrlParser: true })
+    await mongoose.connect(connectionStr, { useNewUrlParser: true,useFindAndModify: false })
 
     console.log('Connection with database succeeded')
     return mongoose.connection

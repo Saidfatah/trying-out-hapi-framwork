@@ -1,7 +1,9 @@
-import { Schema } from 'mongoose'
+import { Schema,model } from 'mongoose'
 
-export const TodoSchema = new Schema({
-  text: String,
-  isCompleted: Boolean,
-  createdAt: Date
+ const TodoSchema = new Schema({
+  text: { type: String, default: 'todo',required:true },
+  isCompleted: { type: Boolean, default: false },
+  createdAt: { type: Date, default: new Date() }
 })
+
+export default model('Todo', TodoSchema)
